@@ -57,35 +57,43 @@
 		<div class="ctncreacnt">
 			<h1>Autenticación</h1>
 
-<!-----------*****Formulario inicio de sesión****---------------------------------------------->
+<!-----------*****Formulario registro de usaurios****---------------------------------------------->
 				<div class="ctnsbcreacnt">
 					<div class="cuentaregis">
-						<form action="crearcuent.php" method="post">
+						<!---------------------FORMULARIO PARA REGISTRARSE--------------------------------------------->				
+						<form  action="servicios/insertar.php" method="post">
+							<div class="requerido">
+								<h3>DATOS PERSONALES</h3>
+								<p>*Campos requeridos</p>
+							</div>
+							
+							
+							<div class="formail">
+								<label>Usuario*</label><br>
+								<input name="name" type="text" placeholder="Usuario" required>
+							</div>
 
-							<h3>CREAR UNA CUENTA</h3>
-							<div class="forctn">
-								<p>Escriba su correo electronico para crear su cuenta</p>
+							<div class="formail">
+								<label>Correo electrónico*</label><br>
+								<input name="email" type="email" placeholder="email" required>
 							</div>
-							<div class="forcorreo">
-								<label>Correo electrónico</label><br>
-								<input type="email" name="email_envio" required>
+
+							<div class="formail">
+								<label>Contraseña*</label><br>
+								<input name="password" type="pass" placeholder="Contraseña" required>
 							</div>
-							<div class="btnsubmit">
+
+    							<div class="btnsubmi">
+								<input type="submit" onclick=" return validar();" name="register">
 								
-								<a href="crearcuent.php">
-								<button type="submit" name="btnenviar_email"><!--El boton es para enviar el correo digitado-->
-									<span>
-										<i class="iuser fas fa-user"></i>
-										CREAR CUENTA
-									</span>
-								</button>
-								</a>
 							</div>
 						</form>
+					
 					</div>
+
+
+
 <div class="cuentaregis">
-
-
 
 	        <!--Formulario ¿YA ESTÁ REGISTRADO? -->
 
@@ -96,7 +104,7 @@
 
 			<div class="forcorreo">
 			<label>Usuario</label><br>
-			<input type="text" name="user" placeholder="Correo">
+			<input type="text" name="user" placeholder="Usuario">
 		    </div>
 
 		    <div class="forcorreo">
